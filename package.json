@@ -1,0 +1,29 @@
+{
+  "name": "ebrs-score",
+  "version": "6.0.0",
+  "description": "EBRS (European Business Reputation Standard) — open-source company reputation scoring algorithm. 15 signals, 5 axes, null-exclusion + coverage-shrinkage principles.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": ["dist", "src", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "ebrs", "reputation", "scoring", "business", "company",
+    "credit-scoring", "risk-assessment", "transparency",
+    "lithuania", "european", "open-data", "data-gov-lt"
+  ],
+  "author": "topimones.lt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rekvizitai-UAB/ebrs-score"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^3.2.0"
+  }
+}

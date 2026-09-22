@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use or evaluate this scoring protocol, please cite it as below."
+title: "EBRS - European Business Reputation Standard (open scoring protocol, public review)"
+version: 6.0.0
+date-released: 2026-07-17
+license: MIT
+repository-code: "https://github.com/Rekvizitai-UAB/ebrs-score"
+abstract: >-
+  Open-source company reputation scoring protocol: 15 signals, 5 axes,
+  null-exclusion principle, coverage shrinkage, terminal-state caps.
+  Candidate standard - not adopted by any European standardisation
+  organisation; not independently audited.
