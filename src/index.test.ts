@@ -25,6 +25,7 @@ function makeCompany(overrides: Partial<CompanySignalData> = {}): CompanySignalD
     reportingData: null,
     governanceData: null,
     ownershipData: null,
+    bankruptcyData: null,
     ...overrides,
   }
 }
@@ -45,7 +46,7 @@ describe('EBRS Scoring', () => {
     expect(result).toBeNull()
   })
 
-  it('has 5 EBRS axes', () => {
+  it('has four EBRS axes', () => {
     const result = computeReputation(makeCompany())!
     const axisNames = result.ebrsAxes.map(a => a.axis)
     expect(axisNames).toContain('continuity')
@@ -99,8 +100,8 @@ describe('EBRS Scoring', () => {
     expect(cleanTax).toBeGreaterThan(debtTax)
   })
 
-  it('has 15 signals in the registry', () => {
-    expect(SIGNAL_REGISTRY.length).toBe(15)
+  it('has 13 signals in the registry', () => {
+    expect(SIGNAL_REGISTRY.length).toBe(13)
   })
 
   it('v5.3 coverage shrinkage pulls a sparse high-scoring company toward neutral', () => {
@@ -119,15 +120,15 @@ describe('EBRS Scoring', () => {
     }
   })
 
-  it('v5.3 full coverage would leave the overall unshrunk (prior weight 0)', () => {
+  it('ratings do not change signal coverage in v7', () => {
     // Sanity on the formula: when missing = 0, priorWeight = 0, so shrunk == raw.
     // (Constructing a full-15-signal fixture needs all gov tables; here we assert
     // the monotonic property: more signals present → less downward pull.)
     const sparse = computeReputation(makeCompany())!
     const richer = computeReputation(makeCompany({
-      ratingAverage: 8.5, ratingCount: 12, // adds community_trust signal
+      ratingAverage: 8.5, ratingCount: 12, // ignored by v7
     }))!
-    expect(richer.signals.length).toBeGreaterThanOrEqual(sparse.signals.length)
+    expect(richer).toEqual(sparse)
   })
 })
 

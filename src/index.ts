@@ -2,7 +2,7 @@
  * EBRS — European Business Reputation Standard
  *
  * Open-source company reputation scoring algorithm.
- * 15 signals across 5 axes. Null-exclusion principle.
+ * 13 signals across 4 axes. Null-exclusion principle.
  *
  * @example
  * ```ts
@@ -27,6 +27,7 @@
  *   reportingData: null,
  *   governanceData: null,
  *   ownershipData: null,
+ *   bankruptcyData: null,
  * })
  *
  * if (score) {
