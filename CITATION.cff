@@ -6,7 +6,7 @@ date-released: 2026-07-17
 license: MIT
 repository-code: "https://github.com/Rekvizitai-UAB/ebrs-score"
 abstract: >-
-  Open-source company reputation scoring protocol: 15 signals, 5 axes,
+  Open-source company reputation scoring protocol: 13 signals, 4 axes,
   null-exclusion principle, coverage shrinkage, terminal-state caps.
   Candidate standard - not adopted by any European standardisation
   organisation; not independently audited.
