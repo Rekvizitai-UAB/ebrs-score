@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use or evaluate this scoring protocol, please cite it as below."
 title: "EBRS - European Business Reputation Standard (open scoring protocol, public review)"
-version: 6.0.0
-date-released: 2026-07-17
+version: 7.0.0
+date-released: 2026-09-25
 license: MIT
 repository-code: "https://github.com/Rekvizitai-UAB/ebrs-score"
 abstract: >-
